@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import Staff from './main/staff/Staff';
+import About from './main/About';
 
-function App() {
+const AppStyled = styled.div`
+  border: 1px solid	#E8E8E8;
+  border-top: 0;
+  display: flex;
+  padding-top: 45px;
+
+  @media (max-width:961px) {
+    flex-direction: column;
+  }
+`
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppStyled>
+      <About />
+      <Staff />
+    </AppStyled>
   );
 }
 
