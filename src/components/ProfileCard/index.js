@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const ProfileStyled = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 220px;
+  max-width: 420px;
   align-items: center;
 
   .image {
@@ -25,8 +25,6 @@ const ProfileStyled = styled.div`
   }
 
   @media (max-width: 480px) {
-    max-width: 420px;
-
     .image {
       width: 420px;
       height: 460px;
@@ -43,10 +41,10 @@ const ProfileStyled = styled.div`
 `
 
 const ProfileCard = props => {
-  const { firstname, lastname, job, avatar} = props.data;
+  const { firstname, lastname, job, avatar, id } = props.data;
   return (
     <ProfileStyled>
-      <img src={avatar} className="image"/>
+      <img src={`${avatar}/?img=${id > 70 ? id - 70 : id}`} className="image"/>
       <h2 className="name">{`${firstname} ${lastname}`}</h2>
       <p className="job">{job}</p>
     </ProfileStyled>
