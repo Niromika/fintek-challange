@@ -14,10 +14,10 @@ const Staff = () => {
   const [selectedEmployees, setEmployees] = useState([]);
 
   useEffect(() => {
-    setEmployees(get6UniqueRandomIndexs(data));
+    setEmployees(get6UniqueRandomIndexes(data));
   }, []);
 
-  const get6UniqueRandomIndexs = array => {
+  const get6UniqueRandomIndexes = array => {
     let counter = 0;
     let i = array.length;
     let j = 0;
