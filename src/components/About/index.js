@@ -72,7 +72,7 @@ const AboutStyled = styled.div`
 const About = () => {
   return (
       <AboutStyled>
-        <h1 className="title">Executing<br /> is<br /> everything</h1>
+        <h1 className="title">Execution<br /> is<br /> everything</h1>
         <section className="company-about">
           <h2 className="sub-title">WHO ARE WE</h2>
           <p className="description">We are a team of creativly diverse,<br /> driven, and innovative individuals<br /> working to achieve the best we can.</p>
